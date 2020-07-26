@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="5" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-07-26T20:41:10 IST" name="Aliexpress" finished-at="2020-07-26T20:42:45 IST" duration-ms="94708">
+    <groups>
+      <group name="regression">
+        <method signature="AliExpressWorkflow.searchproduct()[pri:0, instance:aliexpress.tests.AliExpressWorkflow@771a660]" name="searchproduct" class="aliexpress.tests.AliExpressWorkflow"/>
+        <method signature="AliExpressWorkflow.searchresultpagevalidation()[pri:1, instance:aliexpress.tests.AliExpressWorkflow@771a660]" name="searchresultpagevalidation" class="aliexpress.tests.AliExpressWorkflow"/>
+        <method signature="AliExpressWorkflow.productpagevalidation()[pri:2, instance:aliexpress.tests.AliExpressWorkflow@771a660]" name="productpagevalidation" class="aliexpress.tests.AliExpressWorkflow"/>
+        <method signature="AliExpressWorkflow.Buytheproductproductpagevalidation()[pri:4, instance:aliexpress.tests.AliExpressWorkflow@771a660]" name="Buytheproductproductpagevalidation" class="aliexpress.tests.AliExpressWorkflow"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="AliExpressWorkflow.searchproduct()[pri:0, instance:aliexpress.tests.AliExpressWorkflow@771a660]" name="searchproduct" class="aliexpress.tests.AliExpressWorkflow"/>
+        <method signature="AliExpressWorkflow.searchresultpagevalidation()[pri:1, instance:aliexpress.tests.AliExpressWorkflow@771a660]" name="searchresultpagevalidation" class="aliexpress.tests.AliExpressWorkflow"/>
+        <method signature="AliExpressWorkflow.productpagevalidation()[pri:2, instance:aliexpress.tests.AliExpressWorkflow@771a660]" name="productpagevalidation" class="aliexpress.tests.AliExpressWorkflow"/>
+        <method signature="AliExpressWorkflow.Buytheproductproductpagevalidation()[pri:4, instance:aliexpress.tests.AliExpressWorkflow@771a660]" name="Buytheproductproductpagevalidation" class="aliexpress.tests.AliExpressWorkflow"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2020-07-26T20:41:10 IST" name="AliexpressSuite" finished-at="2020-07-26T20:42:45 IST" duration-ms="94708">
+      <class name="aliexpress.tests.AliExpressWorkflow">
+        <test-method is-config="true" signature="presetup()[pri:0, instance:aliexpress.tests.AliExpressWorkflow@771a660]" started-at="2020-07-26T20:40:20 IST" name="presetup" finished-at="2020-07-26T20:41:10 IST" duration-ms="50014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method is-config="true" signature="classsetup()[pri:0, instance:aliexpress.tests.AliExpressWorkflow@771a660]" started-at="2020-07-26T20:41:11 IST" name="classsetup" finished-at="2020-07-26T20:41:14 IST" duration-ms="3129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classsetup -->
+        <test-method signature="searchproduct()[pri:0, instance:aliexpress.tests.AliExpressWorkflow@771a660]" started-at="2020-07-26T20:41:14 IST" name="searchproduct" finished-at="2020-07-26T20:41:45 IST" duration-ms="30885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchproduct -->
+        <test-method signature="searchresultpagevalidation()[pri:1, instance:aliexpress.tests.AliExpressWorkflow@771a660]" started-at="2020-07-26T20:41:45 IST" name="searchresultpagevalidation" finished-at="2020-07-26T20:41:47 IST" depends-on-methods="aliexpress.tests.AliExpressWorkflow.searchproduct" duration-ms="2579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchresultpagevalidation -->
+        <test-method signature="productpagevalidation()[pri:2, instance:aliexpress.tests.AliExpressWorkflow@771a660]" started-at="2020-07-26T20:41:47 IST" name="productpagevalidation" finished-at="2020-07-26T20:42:42 IST" depends-on-methods="aliexpress.tests.AliExpressWorkflow.searchresultpagevalidation" duration-ms="55098" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productpagevalidation -->
+        <test-method signature="Buytheproductproductpagevalidation()[pri:4, instance:aliexpress.tests.AliExpressWorkflow@771a660]" started-at="2020-07-26T20:42:42 IST" name="Buytheproductproductpagevalidation" finished-at="2020-07-26T20:42:45 IST" depends-on-methods="aliexpress.tests.AliExpressWorkflow.productpagevalidation" duration-ms="2450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Buytheproductproductpagevalidation -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:aliexpress.tests.AliExpressWorkflow@771a660]" started-at="2020-07-26T20:42:45 IST" name="teardown" finished-at="2020-07-26T20:42:47 IST" duration-ms="1925" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- aliexpress.tests.AliExpressWorkflow -->
+    </test> <!-- AliexpressSuite -->
+  </suite> <!-- Aliexpress -->
+</testng-results>
