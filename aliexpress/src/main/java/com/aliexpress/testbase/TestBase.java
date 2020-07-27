@@ -48,7 +48,7 @@ public class TestBase {
 	public void classsetup() {
 		extent = new ExtentReports("./Test Resutls/AliExpress_flow.html", true);
 		extent.loadConfig(new File("extent-config.xml"));
-		logger = extent.startTest("AlieExpress Flow Validaton");
+		logger = extent.startTest("AliExpress Flow Validaton");
 	}
 
 	/***

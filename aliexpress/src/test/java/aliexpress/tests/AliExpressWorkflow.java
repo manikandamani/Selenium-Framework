@@ -37,6 +37,13 @@ public class AliExpressWorkflow extends TestBase {
 			e.printStackTrace();
 		}
 	}
+	/***
+	 * Close the popup which occurs randomly
+	 */
+	@Test(invocationCount=10,priority = 1)
+	public void closepopup() {
+		pages.getHomePage().fn_closePopup();
+	}
 
 	/***
 	 * To validate search result count
@@ -60,7 +67,7 @@ public class AliExpressWorkflow extends TestBase {
 	@Test(priority = 2, dependsOnMethods = { "searchresultpagevalidation" }, groups = { "regression", "smoke" })
 	public void productpagevalidation() throws Exception {
 
-		pages.getHomePage().fn_closePopup();
+		
 		pages.getSearchPage().fn_selectfirstproduct();
 		BrowserUtils.waitForPageToLoad(15);
 		pages.getProductPage().fn_productDescription();
@@ -73,9 +80,9 @@ public class AliExpressWorkflow extends TestBase {
 	 * 
 	 * @throws Exception any failures
 	 */
-	@Test(priority = 5, dependsOnMethods = { "productpagevalidation" }, groups = { "regression", "smoke" })
+	@Test(priority = 4, dependsOnMethods = { "productpagevalidation" }, groups = { "regression", "smoke" })
 	public void Buytheproductproductpagevalidation() throws Exception {
-		pages.getHomePage().fn_closePopup();
+		//pages.getHomePage().fn_closePopup();
 		pages.getProductPage().fn_buynow();
 
 	}
@@ -85,7 +92,7 @@ public class AliExpressWorkflow extends TestBase {
 	 * 
 	 * @throws Exception
 	 */
-	@Test(priority = 4, dependsOnMethods = { "productpagevalidation" }, groups = { "regression" })
+	@Test(priority = 5, dependsOnMethods = { "productpagevalidation" }, groups = { "regression" })
 	public void verifyproductimage() throws Exception {
 		pages.getHomePage().fn_closePopup();
 		pages.getProductPage().fn_productImage();
