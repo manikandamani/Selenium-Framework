@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -89,6 +90,16 @@ public class TestBase {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	/***
+	 * To flush the extent report,close the drivers and pages reset
+	 */
+	@AfterSuite(alwaysRun = true)
+	public void teardown() {
+		Driver.closeDriver();
+		extent.flush();
+		pages.reset();
 	}
 
 }

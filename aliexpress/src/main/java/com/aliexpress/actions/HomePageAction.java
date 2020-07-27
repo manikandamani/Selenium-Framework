@@ -1,11 +1,14 @@
 package com.aliexpress.actions;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.testng.Assert;
 
 import com.aliexpress.Pages.HomePage;
 import com.aliexpress.utilities.BrowserUtils;
 import com.aliexpress.utilities.Driver;
 import com.aliexpress.utilities.Reporting;
+
 
 /***
  * To write methods for Home page objects
@@ -29,7 +32,8 @@ public class HomePageAction extends HomePage {
 
 			searchBox.sendKeys(Product);
 			searchButton.click();
-
+			
+			Assert.assertEquals(Driver.getDriver().getTitle(), "Computer – Buy Computer with free shipping on AliExpress version");
 			report.logPortalExtentreport(Driver.getDriver(), logger, "PASS", "Expected :Product should be searched successfully Actual:Product searched successfully ",
 					"product search screen");
 
@@ -45,8 +49,11 @@ public class HomePageAction extends HomePage {
 	 */
 	public void fn_closePopup() {
 		try {
-			BrowserUtils.waitForVisibility(popcloseButton, 20);
+			
+			if(Driver.getDriver().findElements(By.xpath("//a[text()='x']")).size()>0) {
+			BrowserUtils.waitForVisibility(popcloseButton, 5);
 			popcloseButton.click();
+			}
 			executionmode = true;
 
 		} catch (NoSuchElementException e) {

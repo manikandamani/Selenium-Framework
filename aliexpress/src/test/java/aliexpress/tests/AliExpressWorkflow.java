@@ -73,9 +73,9 @@ public class AliExpressWorkflow extends TestBase {
 	 * 
 	 * @throws Exception any failures
 	 */
-	@Test(priority = 4, dependsOnMethods = { "productpagevalidation" }, groups = { "regression", "smoke" })
+	@Test(priority = 5, dependsOnMethods = { "productpagevalidation" }, groups = { "regression", "smoke" })
 	public void Buytheproductproductpagevalidation() throws Exception {
-
+		pages.getHomePage().fn_closePopup();
 		pages.getProductPage().fn_buynow();
 
 	}
@@ -85,20 +85,11 @@ public class AliExpressWorkflow extends TestBase {
 	 * 
 	 * @throws Exception
 	 */
-	@Test(priority = 5, dependsOnMethods = { "productpagevalidation" }, groups = { "regression" })
+	@Test(priority = 4, dependsOnMethods = { "productpagevalidation" }, groups = { "regression" })
 	public void verifyproductimage() throws Exception {
-
+		pages.getHomePage().fn_closePopup();
 		pages.getProductPage().fn_productImage();
 
 	}
 
-	/***
-	 * To flush the extent report,close the drivers and pages reset
-	 */
-	@AfterSuite(alwaysRun = true)
-	public void teardown() {
-		Driver.closeDriver();
-		extent.flush();
-		pages.reset();
-	}
 }
