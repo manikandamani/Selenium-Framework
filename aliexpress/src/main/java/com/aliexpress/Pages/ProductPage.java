@@ -13,7 +13,11 @@ import org.openqa.selenium.support.PageFactory;
 import com.aliexpress.identifiers.ProductPageIdentifier;
 import com.aliexpress.testbase.TestBase;
 import com.aliexpress.utilities.Driver;
-
+/***
+ * product page
+ * @author MKM
+ *
+ */
 public class ProductPage extends TestBase {
 
 	public ProductPage() {
